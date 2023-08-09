@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Timer from "components/Timer/Timer";
 import React from "react";
@@ -31,26 +30,30 @@ const TodayWeather = () => {
     dateStart?.find((item) => item.location === weatherPerDay.address)?.date1;
 
   return (
-    <div className={css.container}>
-      <div className={css.wrapper}>
-        <h3 className={css.title}>{dayOfWeek}</h3>
-        <div className={css.tempWrapper}>
-          <img
-            src={iconPath}
-            alt={icon}
-            width="100"
-            height="50"
-            className={css.img}
-          />
-          <p className={css.temp}>
-            {Math.round(temp)}
-            <RiCelsiusFill className={css.icon} color="#fff" size="24" />
-          </p>
+    <>
+      {weatherPerDay ? (
+        <div className={css.container}>
+          <div className={css.wrapper}>
+            <h3 className={css.title}>{dayOfWeek}</h3>
+            <div className={css.tempWrapper}>
+              <img
+                src={iconPath}
+                alt={icon}
+                width="100"
+                height="50"
+                className={css.img}
+              />
+              <p className={css.temp}>
+                {Math.round(temp)}
+                <RiCelsiusFill className={css.icon} color="#fff" size="24" />
+              </p>
+            </div>
+            <p className={css.text}>{weatherPerDay.address}</p>
+          </div>
+          <Timer start={start} />
         </div>
-        <p className={css.text}>{weatherPerDay.address}</p>
-      </div>
-      <Timer start={start} />
-    </div>
+      ) : null}
+    </>
   );
 };
 

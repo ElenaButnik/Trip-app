@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Search } from "components/Search/Search";
 import { TripList } from "components/TripList/TripList";
 import { WeatherList } from "components/WeatherList/WeatherList";
 import { Context } from "../../index";
 import TodayWeather from "components/TodayWeather/TodayWeather";
 import { Button } from "components/Button/Button";
+
 import s from "./Main.module.scss";
 
 const Main = () => {
