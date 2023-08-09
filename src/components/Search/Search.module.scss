@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.inputContainer {
+  margin-bottom: 50px;
+  margin-right: auto;
+}
+.input {
+  width: 250px;
+  border: none;
+  outline: none;
+  background-repeat: no-repeat;
+  background-color: $searchBackground;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.14px;
+  color: $titleColor;
+  font-family: "Inter", sans-serif;
+
+  &::placeholder {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+    color: $titleColor;
+  }
+}
+.inputField {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: $searchBackground;
+  border-radius: 10px;
+  height: 73px;
+  width: 316px;
+}
+
+.icon {
+  margin-left: 20px;
+  width: 1.5em;
+  height: 1.5em;
+}

@@ -1,0 +1,15 @@
+.calendarWrap {
+  display: inline-block;
+  position: relative;
+  background-color: red;
+}
+
+.calendarElement {
+  position: absolute;
+  // bottom: 10px;
+  transform: translateX(-50%);
+  left: 350px;
+  border: 1px solid #ccc;
+  z-index: 999;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+.container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.leftContainer {
+  background-color: $modalFormBcg;
+}
+
+.rightContainer {
+  background-color: rgb(221, 156, 222);
+
+  background-image: url(../../images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title {
+  padding-bottom: 56px;
+  text-align: left;
+  color: $titleColor;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+}
+.text {
+  font-weight: 800;
+}
